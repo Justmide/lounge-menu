@@ -1,11 +1,13 @@
 import React from 'react'
-import DrinkMenu from './Components/Selector'
+// import DrinkMenu from './Components/Selector'
+import LandingPage from './Page/LandingPage'
 
 
 const App = () => {
   return (
       <>
-     <DrinkMenu />
+      <LandingPage />
+     {/* <DrinkMenu /> */}
    </>
   )
 }
