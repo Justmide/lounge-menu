@@ -49,7 +49,7 @@ const HeroSection = () => {
               Club Package
             </button>
           </div>
-        </div>a
+        </div>
       </div>
     </section>
   );
