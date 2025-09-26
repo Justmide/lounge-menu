@@ -17,7 +17,7 @@ const DrinkItem = ({ drink }) => {
       className="flex justify-between items-center p-3 bg-white rounded-md shadow-xs hover:bg-gray-100 transition-colors"
     >
       <span className="text-gray-800">{drink.name}</span>
-      <span className="font-bold text-blue-600">${drink.price.toFixed(2)}</span>
+      <span className="font-bold text-blue-600">₦{drink.price.toFixed(2)}</span>
     </motion.li>
   );
 };
@@ -42,29 +42,82 @@ const DrinkMenu = () => {
         // const data = res.json()
 
         const mockData = [
-          {
-            id: 1,
-            name: 'Whiskey',
-            drinks: [
-              { id: 101, name: 'Jack Daniel\'s', price: 12 },
-              { id: 102, name: 'Jameson', price: 10 },
-              { id: 103, name: 'Johnnie Walker Black', price: 15 },
-              { id: 104, name: 'Macallan 12', price: 18 },
-              { id: 105, name: 'Bulleit Bourbon', price: 11 }
-            ]
-          },
-          {
-            id: 2,
-            name: 'Brandy',
-            drinks: [
-              { id: 201, name: 'Hennessy VS', price: 14 },
-              { id: 202, name: 'Rémy Martin VSOP', price: 16 },
-              { id: 203, name: 'Courvoisier VS', price: 13 },
-              { id: 204, name: 'Torres 10', price: 11 },
-              { id: 205, name: 'Metaxa 5 Stars', price: 9 }
-            ]
-          }
-        ];
+  {
+    id: 1,
+    name: 'Whiskey',
+    drinks: [
+      { id: 101, name: "Jack Daniel's", price: 7200 },
+      { id: 102, name: 'Jameson', price: 6000 },
+      { id: 103, name: 'Johnnie Walker Black', price: 9000 },
+      { id: 104, name: 'Macallan 12', price: 10800 },
+      { id: 105, name: 'Bulleit Bourbon', price: 6600 },
+      { id: 106, name: 'Chivas Regal 12', price: 8500 }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Brandy',
+    drinks: [
+      { id: 201, name: 'Hennessy VS', price: 8400 },
+      { id: 202, name: 'Rémy Martin VSOP', price: 9600 },
+      { id: 203, name: 'Courvoisier VS', price: 7800 },
+      { id: 204, name: 'Torres 10', price: 6600 },
+      { id: 205, name: 'Metaxa 5 Stars', price: 5400 }
+    ]
+  },
+  {
+    id: 3,
+    name: 'Beers & Malt Drinks',
+    drinks: [
+      { id: 301, name: 'Star Lager', price: 1200 },
+      { id: 302, name: 'Star Radler', price: 1300 },
+      { id: 303, name: 'Guinness', price: 1500 },
+      { id: 304, name: 'Trophy Lager', price: 1000 },
+      { id: 305, name: 'Heineken', price: 1800 },
+      { id: 306, name: 'Maltina', price: 600 },
+      { id: 307, name: 'Amstel Malta', price: 650 },
+      { id: 308, name: 'Orijin', price: 2000 },
+      { id: 309, name: 'Gulder', price: 1400 },
+      { id: 310, name: 'Fayrouz', price: 700 },
+      { id: 311, name: 'Harp Lager', price: 1300 },
+      { id: 312, name: 'Budweiser', price: 1500 },
+      { id: 313, name: 'Smirnoff Ice', price: 2000 },
+      { id: 314, name: 'Heineken 0.0', price: 1700 },
+      { id: 315, name: 'Star Lite', price: 1200 },
+      { id: 316, name: 'Trophy Stout', price: 1100 },
+      { id: 317, name: 'Malta Guinness', price: 650 },
+      { id: 318, name: 'Castle Lager', price: 1400 },
+      { id: 319, name: 'Kingfisher', price: 1800 },
+      { id: 320, name: 'Bud Light', price: 1600 }
+    ]
+  },
+  {
+    id: 4,
+    name: 'Pepper Soup & Finger Foods',
+    drinks: [
+      { id: 401, name: 'Goat Meat Pepper Soup', price: 3500 },
+      { id: 402, name: 'Fish Pepper Soup', price: 3000 },
+      { id: 403, name: 'Chicken Pepper Soup', price: 2800 },
+      { id: 404, name: 'Suya (Beef Skewers)', price: 1200 },
+      { id: 405, name: 'Assorted Meat Fingers', price: 1500 },
+      { id: 406, name: 'Spicy Chicken Fingers', price: 1400 },
+      { id: 407, name: 'Grilled Sausage Fingers', price: 1300 }
+    ]
+  },
+  {
+    id: 5,
+    name: 'Shawarma & Snacks',
+    drinks: [
+      { id: 501, name: 'Chicken Shawarma', price: 2000 },
+      { id: 502, name: 'Beef Shawarma', price: 2200 },
+      { id: 503, name: 'French Fries', price: 800 },
+      { id: 504, name: 'Chicken Wings', price: 1500 },
+      { id: 505, name: 'Spring Rolls', price: 1000 },
+      { id: 506, name: 'Cheese Shawarma', price: 2300 },
+      { id: 507, name: 'Mixed Shawarma Platter', price: 3500 }
+    ]
+  }
+];
 
         await new Promise(resolve => setTimeout(resolve, 1000));
         
