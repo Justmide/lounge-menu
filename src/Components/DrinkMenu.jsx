@@ -17,7 +17,9 @@ const DrinkItem = ({ drink }) => {
       className="flex justify-between items-center p-3 bg-white rounded-md shadow-xs hover:bg-gray-100 transition-colors"
     >
       <span className="text-gray-800">{drink.name}</span>
-      <span className="font-bold text-blue-600">₦{drink.price.toFixed(2)}</span>
+     <span className="font-bold text-blue-600">
+  ₦{drink.price.toLocaleString()}
+</span>
     </motion.li>
   );
 };
@@ -192,21 +194,52 @@ const DrinkMenu = () => {
         animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 0.3 }}
       >
-        <label htmlFor="category-select" className="block text-sm font-medium text-gray-700 mb-2">
-          Select Drink Category:
-        </label>
-        <select
-          id="category-select"
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        >
-          {categories.map((category) => (
-            <option key={category.id} value={category.name}>
-              {category.name}
-            </option>
-          ))}
-        </select>
+<label
+  htmlFor="category-select"
+  className="block text-sm font-semibold text-gray-800 mb-2"
+>
+  Select Drink Category:
+</label>
+
+<div className="relative w-full">
+  <select
+    id="category-select"
+    value={selectedCategory}
+    onChange={handleCategoryChange}
+    className="
+      block w-full appearance-none px-4 py-3 pr-10
+      border border-gray-300 rounded-lg
+      shadow-md bg-white
+      text-gray-700 font-medium
+      hover:border-blue-400 hover:shadow-lg
+      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+      transition duration-200 ease-in-out
+    "
+  >
+    {categories.map((category) => (
+      <option key={category.id} value={category.name}>
+        {category.name}
+      </option>
+    ))}
+  </select>
+
+  {/* Dropdown arrow */}
+  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
+    <svg
+      className="h-5 w-5"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </div>
+</div>
+
       </motion.div>
 
       {selectedCategoryData && (

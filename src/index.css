@@ -1,0 +1,20 @@
+/* Import at the very top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* Body text */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Headings (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+}
+
+/* Optional: make labels and buttons a bit bolder */
+label, button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
