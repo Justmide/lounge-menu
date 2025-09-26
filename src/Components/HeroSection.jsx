@@ -10,6 +10,7 @@ const HeroSection = () => {
           src={wallpaper}
           alt="lounge-background"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/60"></div> {/* Full black overlay */}
       </div>
